@@ -15,9 +15,8 @@ html {
 }
 
 header {
-  background: rgba(30, 30, 30, 0.47);
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 2px solid #1e1e1e;
   backdrop-filter: blur(12.1px);
   -webkit-backdrop-filter: blur(12.1px);
   width: 100%;
@@ -47,7 +46,7 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #0085ff;
+  color: #090D37;
   padding: 5px 0;
   border-bottom: 3px solid transparent;
   transition: border-bottom 0.2s;
@@ -55,11 +54,11 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a.active {
-  border-bottom-color: dodgerblue;
+  border-bottom-color: #090D37;
 }
 
 .hamburger {
-  color: #0085ff;
+  color: #090D37;
   cursor: pointer;
   display: none;
   font-size: 24px;
@@ -103,9 +102,9 @@ header nav ul li a.active {
     top: 70px;
     left: -100%;
     width: 100%;
-    background: #1e1e1e;
+    border: 2px solid #1e1e1e;
+    background: #fff;
     padding: 20px;
-    border-radius: 10px;
     transition: left 0.3s;
   }
 

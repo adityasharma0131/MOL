@@ -1,6 +1,5 @@
-// Header.js
 import React, { useState, useEffect } from "react";
-import logo from "../assets//Screenshot_2024-06-25_143958-removebg-preview 2.png";
+import logo from "../assets/Screenshot_2024-06-25_143958-removebg-preview 2.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink, Link } from "react-router-dom";
 
@@ -17,19 +16,11 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className={isScrollingDown ? "hidden" : ""}>
@@ -38,20 +29,60 @@ const Header = () => {
           <img src={logo} alt="Logo" />
         </Link>
       </div>
-      <input type="checkbox" id="nav_check" hidden checked={isMenuOpen} readOnly />
+      <input
+        type="checkbox"
+        id="nav_check"
+        hidden
+        checked={isMenuOpen}
+        readOnly
+      />
       <nav className={isMenuOpen ? "open" : ""}>
         <ul>
-          {["/", "/products", "/gallery", "/about-us", "/contact-us"].map((path, index) => (
-            <li key={index}>
-              <NavLink
-                to={path}
-                className={({ isActive }) => (isActive ? "active" : "")}
-                onClick={closeMenu}
-              >
-                {path.replace("/", "").replace("-", " ") || "Home"}
-              </NavLink>
-            </li>
-          ))}
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/products"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+             About us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/gallery"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+              Services
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+              Get in Touch
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact-us"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+              Q & A
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <label htmlFor="nav_check" className="hamburger" onClick={toggleMenu}>
