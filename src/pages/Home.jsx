@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import backgroundImage from "../assets/Rectangle 43.png"; // Adjust the path as necessary
 
 const Home = () => {
   const [counts, setCounts] = useState({
@@ -47,6 +48,8 @@ const Home = () => {
   return (
     <>
       <div className="homepage">
+        <img className="homepage-img" src={backgroundImage} alt="Background" />
+
         <div>
           <div className="hero-bgbox">
             <h1 className="hero-heading">

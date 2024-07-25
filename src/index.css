@@ -107,6 +107,16 @@ header nav ul li a.active {
   background-size: cover;
 }
 
+.homepage-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .hero-bgbox {
   position: relative;
   padding: 1rem;
