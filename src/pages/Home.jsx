@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import backgroundImage from "../assets/Rectangle 43.png"; // Ensure the path is correct
+import backgroundImage from "../assets/Rectangle 43.png";
+import { FaStopwatch } from "react-icons/fa6";
+import { TbClock24 } from "react-icons/tb";
+import { AiOutlineSafety } from "react-icons/ai";
 
 const Home = () => {
   const [counts, setCounts] = useState({
@@ -109,6 +112,46 @@ const Home = () => {
                   </div>
                 </li>
               ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="services" id="services">
+        <div className="services-bgbox">
+          <h1 className="services-heading">Services We Provide</h1>
+          <div className="services-list">
+            <ul>
+              <li>
+                <FaStopwatch />
+                <h1>Fast and Reliable Delivery</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam porro fugiat ad velit commodi dignissimos iusto
+                  eligendi, deserunt maiores ea repellat culpa fuga dolorem
+                  labore aspernatur perspiciatis enim nostrum voluptas.
+                </p>
+              </li>
+              <li>
+                <TbClock24 />
+                <h1>24/7 Customer Support</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam porro fugiat ad velit commodi dignissimos iusto
+                  eligendi, deserunt maiores ea repellat culpa fuga dolorem
+                  labore aspernatur perspiciatis enim nostrum voluptas.
+                </p>
+              </li>
+              <li>
+                <AiOutlineSafety />
+                <h1>Secure and Safe Transport</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam porro fugiat ad velit commodi dignissimos iusto
+                  eligendi, deserunt maiores ea repellat culpa fuga dolorem
+                  labore aspernatur perspiciatis enim nostrum voluptas.
+                </p>
+              </li>
             </ul>
           </div>
         </div>

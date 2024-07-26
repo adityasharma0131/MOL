@@ -234,7 +234,7 @@ a {
 
 .about-heading {
   font-size: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .about-tagline {
@@ -253,7 +253,7 @@ a {
 
 .about-vis-mis li {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
   max-width: 350px;
   margin: 0 auto;
@@ -269,6 +269,47 @@ a {
   line-height: 1.5;
 }
 
+/*=============== SERVICES SECTION ===============*/
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #090d37;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.services-bgbox {
+  max-width: 1200px;
+}
+.services-heading {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.services-list ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.services-list li {
+  border: 2px solid #090d37;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.services-list li svg {
+  color: #090d37;
+  width: 10rem;
+  height: 10rem;
+}
 /*=============== RESPONSIVE STYLES ===============*/
 @media screen and (min-width: 768px) {
   .about-us {
