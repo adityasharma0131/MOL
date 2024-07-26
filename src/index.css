@@ -239,12 +239,12 @@ a {
 }
 
 .about-heading {
-  font-size: 4rem;
+  font-size: 7vh;
   margin-bottom: 3rem;
 }
 
 .about-tagline {
-  font-size: 2rem;
+  font-size: 3.5vh;
   margin-bottom: 2rem;
 }
 
@@ -290,7 +290,7 @@ a {
   max-width: 1200px;
 }
 .services-heading {
-  font-size: 4rem;
+  font-size: 7vh;
   margin-bottom: 3rem;
 }
 
@@ -300,6 +300,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 5rem;
   gap: 2rem;
 }
 
@@ -316,6 +317,88 @@ a {
   width: 10rem;
   height: 10rem;
 }
+
+/*=============== SOLUTIONS SECTION ===============*/
+.solutions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #090d37;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.solutions-bgbox {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.solutions-heading {
+  font-size: 6vh;
+  margin-bottom: 3rem;
+}
+
+.card {
+  width: 100%;
+}
+
+.solutions-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.solutions-item {
+  color: #fff;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 10px;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.solutions-item:hover {
+  color: #090d37;
+  background-color: #fff;
+}
+
+.solutions-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.solutions-text {
+  margin-top: 1rem;
+}
+
+.solutions-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-head {
+  color: #f61422;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.solutions-description {
+  font-size: 0.938rem;
+  line-height: 1.5;
+}
+
 /*=============== RESPONSIVE STYLES ===============*/
 @media screen and (min-width: 768px) {
   .about-us {
@@ -340,6 +423,10 @@ a {
   .about-vis-mis li {
     flex: 1;
     min-width: 250px;
+  }
+  .solutions-list {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 

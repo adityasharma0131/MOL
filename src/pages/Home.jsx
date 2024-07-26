@@ -3,7 +3,9 @@ import backgroundImage from "../assets/Rectangle 43.png";
 import { FaStopwatch } from "react-icons/fa6";
 import { TbClock24 } from "react-icons/tb";
 import { AiOutlineSafety } from "react-icons/ai";
-
+import air from "../assets/pikaso_enhance__vivid_2K_Standard_r_c_ (2) 2.png";
+import ship from "../assets/pikaso_enhance__vivid_2K_Standard_r_c_ (3) 2.png";
+import truck from "../assets/pikaso_enhance__vivid_2K_Standard_r_c_ (4) 2.png";
 const Home = () => {
   const [counts, setCounts] = useState({
     shipments: 0,
@@ -148,6 +150,64 @@ const Home = () => {
                   eligendi, deserunt maiores ea repellat culpa fuga dolorem
                   labore aspernatur perspiciatis enim nostrum voluptas.
                 </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="solutions" id="solutions">
+        <div className="solutions-bgbox">
+          <h2 className="solutions-heading">
+            Connecting your world with diverse freight solutions
+          </h2>
+
+          <div className="card">
+            <ul className="solutions-list">
+              <li className="solutions-item">
+                <div className="solutions-icon">
+                  <img src={air} alt="Air Freight" />
+                </div>
+                <div className="solutions-text">
+                  <div className="card-head">
+                    <p className="solutions-title">AIR FREIGHT</p>
+                    <p className="solutions-title">01</p>
+                  </div>
+                  <p className="solutions-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Delectus excepturi voluptates assumenda dicta neque.
+                  </p>
+                </div>
+              </li>
+              <li className="solutions-item">
+                <div className="solutions-icon">
+                  <img src={ship} alt="Sea Freight" />
+                </div>
+                <div className="solutions-text">
+                  <div className="card-head">
+                    <p className="solutions-title">CARGO FREIGHT</p>
+                    <p className="solutions-title">02</p>
+                  </div>
+                  <p className="solutions-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Delectus excepturi voluptates assumenda dicta neque.
+                  </p>
+                </div>
+              </li>
+              <li className="solutions-item">
+                <div className="solutions-icon">
+                  <img src={truck} alt="Transport Freight" />
+                </div>
+                <div className="solutions-text">
+                  <div className="card-head">
+                    <p className="solutions-title">TRANSPORT FREIGHT</p>
+                    <p className="solutions-title">03</p>
+                  </div>
+                  <p className="solutions-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Delectus excepturi voluptates assumenda dicta neque.
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
