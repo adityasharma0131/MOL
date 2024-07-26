@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/Screenshot_2024-06-25_143958-removebg-preview 2.png";
 import { RiArrowRightUpLine, RiCloseLine, RiMenuLine } from "react-icons/ri";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("up");
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleToggle = () => {
     setMenuOpen(!menuOpen);
@@ -14,7 +31,10 @@ const Header = () => {
   };
 
   return (
-    <header className="header" id="header">
+    <header
+      className={`header ${scrollDirection === "down" ? "hide" : ""}`}
+      id="header"
+    >
       <nav className="nav container">
         <img className="nav__logo" src={logo} alt="Logo" />
 
@@ -23,16 +43,24 @@ const Header = () => {
           id="nav-menu"
         >
           <ul className="nav__list">
-            {["Home", "About Us", "Projects", "Studio", "Contact"].map(
-              (item, index) => (
-                <li className="nav__item" key={index}>
-                  <a href="#" className="nav__link" onClick={handleClose}>
-                    <RiArrowRightUpLine />
-                    <span>{item}</span>
-                  </a>
-                </li>
-              )
-            )}
+            {[
+              { name: "Home", id: "home" },
+              { name: "About Us", id: "about-us" },
+              { name: "Services", id: "services" },
+              { name: "Get in Touch", id: "get-in-touch" },
+              { name: "Q & A", id: "q-&-a" },
+            ].map((item, index) => (
+              <li className="nav__item" key={index}>
+                <a
+                  className="nav__link"
+                  href={`#${item.id}`}
+                  onClick={handleClose}
+                >
+                  <RiArrowRightUpLine />
+                  <span>{item.name}</span>
+                </a>
+              </li>
+            ))}
           </ul>
 
           <div className="nav__close" id="nav-close" onClick={handleClose}>

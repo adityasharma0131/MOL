@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import backgroundImage from "../assets/Rectangle 43.png"; // Adjust the path as necessary
+import backgroundImage from "../assets/Rectangle 43.png"; // Ensure the path is correct
 
 const Home = () => {
   const [counts, setCounts] = useState({
@@ -19,8 +19,8 @@ const Home = () => {
       experts: 300,
     };
 
-    const duration = 2000; // duration of the animation in milliseconds
-    const stepTime = 20; // time between updates in milliseconds
+    const duration = 2000; // Duration of the animation in milliseconds
+    const stepTime = 20; // Time between updates in milliseconds
 
     Object.keys(targetCounts).forEach((key) => {
       const target = targetCounts[key];
@@ -47,20 +47,18 @@ const Home = () => {
 
   return (
     <>
-      <div className="homepage">
+      <div className="homepage" id="home">
         <img className="homepage-img" src={backgroundImage} alt="Background" />
 
-        <div>
-          <div className="hero-bgbox">
-            <h1 className="hero-heading">
-              <span className="blue">My</span> Ocean{" "}
-              <span className="blue">Logistics</span>
-            </h1>
-            <h1 className="tag-line">
-              Bridging <span className="blue">Markets</span>, Connecting{" "}
-              <span className="blue">Worlds</span>
-            </h1>
-          </div>
+        <div className="hero-bgbox">
+          <h1 className="hero-heading">
+            <span className="blue">My</span> Ocean{" "}
+            <span className="blue">Logistics</span>
+          </h1>
+          <h2 className="tag-line">
+            Bridging <span className="blue">Markets</span>, Connecting{" "}
+            <span className="blue">Worlds</span>
+          </h2>
         </div>
       </div>
       <div className="number-bgbox">
@@ -87,6 +85,32 @@ const Home = () => {
               <p>Logistics Experts</p>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <div className="about-us" id="about-us">
+        <div className="about-bgbox">
+          <h1 className="about-heading">Why Choose Us?</h1>
+          <h3 className="about-tagline">We are My Ocean Logistics</h3>
+
+          <div className="about-vis-mis">
+            <ul>
+              {["About Us", "Our Vision", "Our Mission"].map((item, index) => (
+                <li key={index}>
+                  <div className="aboutus">
+                    <h1>{item}</h1>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Necessitatibus quos suscipit atque minima provident amet
+                      dolore, culpa, cupiditate consequuntur adipisci, quaerat
+                      illo? Tenetur reiciendis nostrum facere illum praesentium,
+                      repellat sequi.
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </>

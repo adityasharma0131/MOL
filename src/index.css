@@ -26,16 +26,15 @@
 
 /*========== Responsive typography ==========*/
 @media screen and (min-width: 1150px) {
-  :root {
-    --normal-font-size: 1rem;
-  }
 }
 
 /*=============== BASE ===============*/
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 html {
@@ -44,7 +43,6 @@ html {
 
 body {
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
 }
 
 ul {
@@ -108,7 +106,8 @@ a {
   cursor: pointer;
 }
 
-.homepage {
+.homepage,
+.about-us {
   min-height: 80vh;
   background-size: cover;
   background-position: center;
@@ -145,6 +144,19 @@ a {
   flex-direction: column;
   align-items: start;
   justify-content: left;
+  color: #f61422;
+
+  /* border: 2px solid #1e1e1e; */
+}
+.about-bgbox {
+  position: relative;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: #f61422;
 
   /* border: 2px solid #1e1e1e; */
@@ -203,6 +215,95 @@ a {
 .number-listing p {
   margin: 5px 0 0;
   color: #555;
+}
+
+/*=============== ABOUT US SECTION ===============*/
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #090d37;
+  color: #fff;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.about-bgbox {
+  max-width: 1200px;
+}
+
+.about-heading {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.about-tagline {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-vis-mis ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-vis-mis li {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.aboutus h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.aboutus p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/*=============== RESPONSIVE STYLES ===============*/
+@media screen and (min-width: 768px) {
+  .about-us {
+    padding: 3rem 1rem;
+  }
+
+  .about-heading {
+    font-size: 5rem;
+  }
+
+  .about-tagline {
+    font-size: 2.5rem;
+  }
+
+  .about-vis-mis {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .about-vis-mis li {
+    flex: 1;
+    min-width: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-heading {
+    font-size: 6rem;
+  }
+
+  .about-tagline {
+    font-size: 3rem;
+  }
 }
 
 /* Navigation for mobile devices */
@@ -349,7 +450,7 @@ a {
   }
 
   .nav {
-    height: calc(var(--header-height) + .1rem);
+    height: calc(var(--header-height) + 0.1rem);
   }
 
   .nav__toggle,
