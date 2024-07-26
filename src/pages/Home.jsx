@@ -23,29 +23,25 @@ const Home = () => {
     };
 
     const duration = 2000; // Duration of the animation in milliseconds
-    const stepTime = 20; // Time between updates in milliseconds
+    const startTime = performance.now();
 
-    Object.keys(targetCounts).forEach((key) => {
-      const target = targetCounts[key];
-      let start = 0;
-      const increment = target / (duration / stepTime);
+    const animateCounts = (currentTime) => {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
 
-      const animateCount = () => {
-        start += increment;
-        if (start >= target) {
-          start = target;
-        }
-        setCounts((prevCounts) => ({
-          ...prevCounts,
-          [key]: Math.floor(start),
-        }));
-        if (start < target) {
-          setTimeout(animateCount, stepTime);
-        }
-      };
+      const newCounts = Object.keys(targetCounts).reduce((acc, key) => {
+        acc[key] = Math.floor(progress * targetCounts[key]);
+        return acc;
+      }, {});
 
-      animateCount();
-    });
+      setCounts(newCounts);
+
+      if (progress < 1) {
+        requestAnimationFrame(animateCounts);
+      }
+    };
+
+    requestAnimationFrame(animateCounts);
   }, []);
 
   return (
@@ -64,6 +60,7 @@ const Home = () => {
           </h2>
         </div>
       </div>
+
       <div className="number-bgbox">
         <div className="number-listing">
           <ul>

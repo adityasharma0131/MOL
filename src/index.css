@@ -83,7 +83,13 @@ a {
 
   z-index: var(--z-fixed);
 }
+.header {
+  transition: transform 0.3s ease;
+}
 
+.header.hide {
+  transform: translateY(-100%);
+}
 .nav {
   position: relative;
   height: var(--header-height);

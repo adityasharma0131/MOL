@@ -31,31 +31,22 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`header ${scrollDirection === "down" ? "hide" : ""}`}
-      id="header"
-    >
+    <header className={`header ${scrollDirection === "down" ? "hide" : ""}`} id="header">
       <nav className="nav container">
         <img className="nav__logo" src={logo} alt="Logo" />
 
-        <div
-          className={`nav__menu ${menuOpen ? "show-menu" : ""}`}
-          id="nav-menu"
-        >
+        <div className={`nav__menu ${menuOpen ? "show-menu" : ""}`} id="nav-menu">
           <ul className="nav__list">
             {[
               { name: "Home", id: "home" },
               { name: "About Us", id: "about-us" },
               { name: "Services", id: "services" },
+              { name: "Solutions", id: "solutions" },
               { name: "Get in Touch", id: "get-in-touch" },
               { name: "Q & A", id: "q-&-a" },
             ].map((item, index) => (
               <li className="nav__item" key={index}>
-                <a
-                  className="nav__link"
-                  href={`#${item.id}`}
-                  onClick={handleClose}
-                >
+                <a className="nav__link" href={`#${item.id}`} onClick={handleClose}>
                   <RiArrowRightUpLine />
                   <span>{item.name}</span>
                 </a>
