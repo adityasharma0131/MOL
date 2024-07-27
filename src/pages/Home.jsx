@@ -7,8 +7,15 @@ import contactLogo from "../assets/MOL-Favicon.png";
 import air from "../assets/pikaso_enhance__vivid_2K_Standard_r_c_ (2) 2.png";
 import ship from "../assets/pikaso_enhance__vivid_2K_Standard_r_c_ (3) 2.png";
 import truck from "../assets/pikaso_enhance__vivid_2K_Standard_r_c_ (4) 2.png";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   const [counts, setCounts] = useState({
     shipments: 0,
     partners: 0,
@@ -256,11 +263,78 @@ const Home = () => {
                 placeholder="Enter the Transportation Method"
                 required
               />
+              <textarea
+                name="con-message"
+                id="con-message"
+                placeholder="Enter your Message"
+              ></textarea>
               <button type="submit" className="send">
                 Send
               </button>
             </form>
-            
+          </div>
+        </div>
+      </div>
+
+      <div className="qna" id="q-&-a">
+        <div className="qna-bgbox">
+          <h2 className="qna-heading">Get in touch</h2>
+          <p className="qna-tagline">
+            Uncover the answers to your most pressing questions about seamless
+            shipping
+          </p>
+          <div className="question-box">
+            <ul>
+              <li className={activeIndex === 0 ? "active" : ""}>
+                <div className="questionaries" onClick={() => handleToggle(0)}>
+                  <h3>Q1 - Question 1</h3>
+                  <IoIosArrowDown />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus perferendis impedit non magnam rem nam beatae alias
+                  expedita ducimus explicabo aliquid consequatur assumenda,
+                  similique adipisci placeat tempora fuga voluptas iusto.
+                </p>
+              </li>
+              <li className={activeIndex === 1 ? "active" : ""}>
+                <div className="questionaries" onClick={() => handleToggle(1)}>
+                  <h3>Q2 - Question 2</h3>
+                  <IoIosArrowDown />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus perferendis impedit non magnam rem nam beatae alias
+                  expedita ducimus explicabo aliquid consequatur assumenda,
+                  similique adipisci placeat tempora fuga voluptas iusto.
+                </p>
+              </li>
+              <li className={activeIndex === 2 ? "active" : ""}>
+                <div className="questionaries" onClick={() => handleToggle(2)}>
+                  <h3>Q3 - Question 3</h3>
+                  <IoIosArrowDown />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus perferendis impedit non magnam rem nam beatae alias
+                  expedita ducimus explicabo aliquid consequatur assumenda,
+                  similique adipisci placeat tempora fuga voluptas iusto.
+                </p>
+              </li>
+              <li className={activeIndex === 3 ? "active" : ""}>
+                <div className="questionaries" onClick={() => handleToggle(3)}>
+                  <h3>Q4 - Question 4</h3>
+                  <IoIosArrowDown />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus perferendis impedit non magnam rem nam beatae alias
+                  expedita ducimus explicabo aliquid consequatur assumenda,
+                  similique adipisci placeat tempora fuga voluptas iusto.
+                </p>
+              </li>
+              {/* Add more questions here as needed */}
+            </ul>
           </div>
         </div>
       </div>

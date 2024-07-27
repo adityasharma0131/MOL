@@ -488,13 +488,18 @@ a {
   max-width: 500px;
 }
 
-.contact-form form input {
+.contact-form form input,
+textarea {
   border-radius: 5px;
   border: 2px solid #090d37;
   width: 100%;
   padding: 0.75rem;
   margin-top: 0.25rem;
   font-size: 1rem;
+}
+.contact-form form textarea {
+  height: 150px;
+  resize: vertical;
 }
 
 .send {
@@ -517,9 +522,179 @@ a {
 .contact-logo .contactlogo {
   width: 100%; /* Increased size */
   height: 100%;
-  object-fit:fill;
+  object-fit: fill;
   margin-top: 2rem;
 }
+
+/*=============== QnA SECTION ===============*/
+.qna {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #070a2b;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.qna-bgbox {
+  max-width: 1200px;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #090d37;
+}
+
+.qna-heading {
+  font-size: 6vh;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.qna-tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.question-box {
+  background-color: #fff;
+  padding: 1rem;
+  color: #090d37;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: start;
+}
+
+.question-box ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.question-box ul li {
+  width: 100%;
+  margin-bottom: 1.5rem; /* Add spacing between each question */
+}
+
+.questionaries {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.questionaries h3 {
+  margin: 0;
+}
+
+.question-box p {
+  margin: 0.5rem 0 0 0;
+  display: none; /* Hide the answers initially */
+}
+
+/* Add CSS for the arrow icon */
+.questionaries svg {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when the question is active */
+.question-box li.active .questionaries svg {
+  transform: rotate(180deg);
+}
+
+.question-box li.active p {
+  display: block; /* Show the answer when active */
+}
+
+/*=============== Footer SECTION ===============*/
+
+.footer-log {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo {
+  width: 15rem;
+  height: 15rem;
+}
+
+.footer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerbox {
+  border: 4px solid #f61422;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 30px 30px 0 0;
+  color: #070a2b;
+}
+
+.footer-content {
+  text-decoration: none;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content:start;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.footer-soc {
+  text-decoration: none;
+  flex-direction: column;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-head {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.footer-desc {
+  color: #070a2b;
+  margin: 5px;
+  font-size: 1.1rem;
+}
+
+.footer-desc:hover {
+  color: #f61422;
+}
+
+.sociallll {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.sociallll li svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+.sociallll li svg:hover{
+  color: #f61422;
+}
+
 /*=============== RESPONSIVE STYLES ===============*/
 @media screen and (min-width: 768px) {
   .about-us {
