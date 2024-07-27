@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import backgroundImage from "../assets/Rectangle 43.png";
 import { FaStopwatch } from "react-icons/fa6";
 import { TbClock24 } from "react-icons/tb";
@@ -11,11 +11,6 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
-
-  const handleToggle = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   const [counts, setCounts] = useState({
     shipments: 0,
     partners: 0,
@@ -23,6 +18,12 @@ const Home = () => {
     clients: 0,
     experts: 0,
   });
+
+  const sectionsRef = useRef([]);
+
+  const handleToggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   useEffect(() => {
     const targetCounts = {
@@ -55,11 +56,32 @@ const Home = () => {
     requestAnimationFrame(animateCounts);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in-visible");
+        } else {
+          entry.target.classList.remove("fade-in-visible");
+        }
+      });
+    });
+
+    sectionsRef.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sectionsRef.current.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <>
-      <div className="homepage" id="home">
+      <div className="homepage fade-in" id="home" ref={(el) => (sectionsRef.current[0] = el)}>
         <img className="homepage-img" src={backgroundImage} alt="Background" />
-
         <div className="hero-bgbox">
           <h1 className="hero-heading">
             <span className="blue">My</span> Ocean{" "}
@@ -72,7 +94,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="number-bgbox">
+      <div className="number-bgbox fade-in" ref={(el) => (sectionsRef.current[1] = el)}>
         <div className="number-listing">
           <ul>
             <li>
@@ -99,11 +121,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="about-us" id="about-us">
+      <div className="about-us fade-in" id="about-us" ref={(el) => (sectionsRef.current[2] = el)}>
         <div className="about-bgbox">
           <h1 className="about-heading">Why Choose Us?</h1>
           <h3 className="about-tagline">We are My Ocean Logistics</h3>
-
           <div className="about-vis-mis">
             <ul>
               {["About Us", "Our Vision", "Our Mission"].map((item, index) => (
@@ -125,7 +146,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="services" id="services">
+      <div className="services fade-in" id="services" ref={(el) => (sectionsRef.current[3] = el)}>
         <div className="services-bgbox">
           <h1 className="services-heading">Services We Provide</h1>
           <div className="services-list">
@@ -165,12 +186,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="solutions" id="solutions">
+      <div className="solutions fade-in" id="solutions" ref={(el) => (sectionsRef.current[4] = el)}>
         <div className="solutions-bgbox">
           <h2 className="solutions-heading">
             Connecting your world with diverse freight solutions
           </h2>
-
           <div className="card">
             <ul className="solutions-list">
               <li className="solutions-item">
@@ -223,7 +243,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="contact" id="contact">
+      <div className="contact fade-in" id="contact" ref={(el) => (sectionsRef.current[5] = el)}>
         <div className="contact-bgbox">
           <h2 className="contact-heading">Get in touch</h2>
           <div className="contact-form">
@@ -276,7 +296,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="qna" id="q-&-a">
+      <div className="qna fade-in" id="q-&-a" ref={(el) => (sectionsRef.current[6] = el)}>
         <div className="qna-bgbox">
           <h2 className="qna-heading">Get in touch</h2>
           <p className="qna-tagline">
