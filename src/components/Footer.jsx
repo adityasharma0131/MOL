@@ -29,20 +29,24 @@ const Footer = () => {
                 <li>
                   <IoIosArrowForward />
                   <Link href="#" className="footer-desc">
-                    Products
+                    About us
                   </Link>
                 </li>
                 <li>
                   <IoIosArrowForward />
-                  <Link className="footer-desc">Gallery</Link>
+                  <Link className="footer-desc">Services</Link>
                 </li>
                 <li>
                   <IoIosArrowForward />
-                  <Link className="footer-desc">About us</Link>
+                  <Link className="footer-desc">Solutions</Link>
                 </li>
                 <li>
                   <IoIosArrowForward />
-                  <Link className="footer-desc">Contact us</Link>
+                  <Link className="footer-desc">Get in Touch</Link>
+                </li>
+                <li>
+                  <IoIosArrowForward />
+                  <Link className="footer-desc">Q & A</Link>
                 </li>
               </ul>
             </div>
@@ -57,7 +61,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <FaFacebook />
+                  <IoIosMail />
                   <Link className="footer-desc">contact@example.com</Link>
                 </li>
                 <li>
