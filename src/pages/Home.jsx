@@ -3,9 +3,11 @@ import backgroundImage from "../assets/Rectangle 43.png";
 import { FaStopwatch } from "react-icons/fa6";
 import { TbClock24 } from "react-icons/tb";
 import { AiOutlineSafety } from "react-icons/ai";
+import contactLogo from "../assets/MOL-Favicon.png";
 import air from "../assets/pikaso_enhance__vivid_2K_Standard_r_c_ (2) 2.png";
 import ship from "../assets/pikaso_enhance__vivid_2K_Standard_r_c_ (3) 2.png";
 import truck from "../assets/pikaso_enhance__vivid_2K_Standard_r_c_ (4) 2.png";
+
 const Home = () => {
   const [counts, setCounts] = useState({
     shipments: 0,
@@ -210,6 +212,55 @@ const Home = () => {
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="contact" id="contact">
+        <div className="contact-bgbox">
+          <h2 className="contact-heading">Get in touch</h2>
+          <div className="contact-form">
+            <form>
+              <input
+                type="text"
+                name="cmpname"
+                id="cmpname"
+                placeholder="Enter your Company Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="cmpemail"
+                placeholder="Enter your Company Email"
+                required
+              />
+              <input
+                type="text"
+                name="departure"
+                id="deploc"
+                placeholder="Enter the Departure Location"
+                required
+              />
+              <input
+                type="text"
+                name="destination"
+                id="desloc"
+                placeholder="Enter the Destination Location"
+                required
+              />
+              <input
+                type="text"
+                name="transportation"
+                id="transmethod"
+                placeholder="Enter the Transportation Method"
+                required
+              />
+              <button type="submit" className="send">
+                Send
+              </button>
+            </form>
+            
           </div>
         </div>
       </div>

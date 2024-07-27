@@ -393,12 +393,133 @@ a {
   justify-content: space-between;
 }
 
-
 .solutions-description {
   font-size: 0.938rem;
   line-height: 1.5;
 }
 
+/*=============== SERVICES SECTION ===============*/
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #090d37;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.services-bgbox {
+  max-width: 1200px;
+}
+.services-heading {
+  font-size: 7vh;
+  margin-bottom: 3rem;
+}
+
+.services-list ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+  gap: 2rem;
+}
+
+.services-list li {
+  border: 2px solid #090d37;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.services-list li svg {
+  color: #090d37;
+  width: 10rem;
+  height: 10rem;
+}
+
+/*=============== SOLUTIONS SECTION ===============*/
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #090d37;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.contact-bgbox {
+  max-width: 1200px;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.contactbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-heading {
+  font-size: 6vh;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form form {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form form input {
+  border-radius: 5px;
+  border: 2px solid #090d37;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
+.send {
+  background-color: #090d37;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-top: 1rem;
+}
+
+.send:hover {
+  background-color: #070a2b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-logo .contactlogo {
+  width: 100%; /* Increased size */
+  height: 100%;
+  object-fit:fill;
+  margin-top: 2rem;
+}
 /*=============== RESPONSIVE STYLES ===============*/
 @media screen and (min-width: 768px) {
   .about-us {
@@ -427,6 +548,18 @@ a {
   .solutions-list {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .contact-heading {
+    font-size: 4vh;
+  }
+
+  .contactbg {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-logo .contactlogo {
+    width: 10rem; /* Adjusted for smaller screens */
   }
 }
 

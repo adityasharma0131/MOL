@@ -42,7 +42,7 @@ const Header = () => {
               { name: "About Us", id: "about-us" },
               { name: "Services", id: "services" },
               { name: "Solutions", id: "solutions" },
-              { name: "Get in Touch", id: "get-in-touch" },
+              { name: "Get in Touch", id: "contact" },
               { name: "Q & A", id: "q-&-a" },
             ].map((item, index) => (
               <li className="nav__item" key={index}>
