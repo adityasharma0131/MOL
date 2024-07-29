@@ -80,7 +80,11 @@ const Home = () => {
 
   return (
     <>
-      <div className="homepage fade-in" id="home" ref={(el) => (sectionsRef.current[0] = el)}>
+      <div
+        className="homepage fade-in"
+        id="home"
+        ref={(el) => (sectionsRef.current[0] = el)}
+      >
         <img className="homepage-img" src={backgroundImage} alt="Background" />
         <div className="hero-bgbox">
           <h1 className="hero-heading">
@@ -94,7 +98,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="number-bgbox fade-in" ref={(el) => (sectionsRef.current[1] = el)}>
+      <div
+        className="number-bgbox fade-in"
+        ref={(el) => (sectionsRef.current[1] = el)}
+      >
         <div className="number-listing">
           <ul>
             <li>
@@ -121,7 +128,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="about-us fade-in" id="about-us" ref={(el) => (sectionsRef.current[2] = el)}>
+      <div
+        className="about-us fade-in"
+        id="about-us"
+        ref={(el) => (sectionsRef.current[2] = el)}
+      >
         <div className="about-bgbox">
           <h1 className="about-heading">Why Choose Us?</h1>
           <h3 className="about-tagline">We are My Ocean Logistics</h3>
@@ -146,7 +157,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="services fade-in" id="services" ref={(el) => (sectionsRef.current[3] = el)}>
+      <div
+        className="services fade-in"
+        id="services"
+        ref={(el) => (sectionsRef.current[3] = el)}
+      >
         <div className="services-bgbox">
           <h1 className="services-heading">Services We Provide</h1>
           <div className="services-list">
@@ -186,7 +201,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="solutions fade-in" id="solutions" ref={(el) => (sectionsRef.current[4] = el)}>
+      <div
+        className="solutions fade-in"
+        id="solutions"
+        ref={(el) => (sectionsRef.current[4] = el)}
+      >
         <div className="solutions-bgbox">
           <h2 className="solutions-heading">
             Connecting your world with diverse freight solutions
@@ -243,7 +262,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="contact fade-in" id="contact" ref={(el) => (sectionsRef.current[5] = el)}>
+      <div
+        className="contact fade-in"
+        id="contact"
+        ref={(el) => (sectionsRef.current[5] = el)}
+      >
         <div className="contact-bgbox">
           <h2 className="contact-heading">Get in touch</h2>
           <div className="contact-form">
@@ -296,9 +319,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="qna fade-in" id="q-&-a" ref={(el) => (sectionsRef.current[6] = el)}>
+      <div
+        className="qna fade-in"
+        id="q-&-a"
+        ref={(el) => (sectionsRef.current[6] = el)}
+      >
         <div className="qna-bgbox">
-          <h2 className="qna-heading">Get in touch</h2>
+          <h2 className="qna-heading">Frequently asked Questions</h2>
           <p className="qna-tagline">
             Uncover the answers to your most pressing questions about seamless
             shipping
